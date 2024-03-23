@@ -12,13 +12,7 @@ jobs:
 
  - name: Download
 
- run: Invoke-WebRequest
-
-https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-
-
-stable-windows-amd64.zip -OutFile
-
-ngrok.zip
+ run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
 
  - name: Extract
 
@@ -26,9 +20,7 @@ ngrok.zip
 
  - name: Auth
 
- run: .\ngrok\ngrok.exe authtoken
-
-$Env:NGROK_AUTH_TOKEN
+ run: .\ngrok\ngrok.exe authtoken$Env:NGROK_AUTH_TOKEN
 
  env:
 
